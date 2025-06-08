@@ -238,6 +238,7 @@ exports.getRankingMahasiswa = async (req, res) => {
           npm: { $first: "$mahasiswa.npm" },
           jurusan: { $first: "$mahasiswa.jurusan" },
           rataRata: { $avg: "$nilai" },
+          totalMataKuliah: { $sum: 1 },
         },
       },
       { $sort: { rataRata: -1 } },
@@ -248,6 +249,7 @@ exports.getRankingMahasiswa = async (req, res) => {
           npm: 1,
           jurusan: 1,
           rataRata: { $round: ["$rataRata", 2] },
+          totalMataKuliah: 1,
         },
       },
     ];
