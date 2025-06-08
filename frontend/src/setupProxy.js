@@ -6,7 +6,7 @@ export default (app) => {
   app.use((req, res, next) => {
     if (req.url.startsWith('/user/') || 
         req.url.startsWith('/nilai/') || 
-        req.url.startsWith('/matakuliah/')) {
+        req.url.startsWith('/matkul/')) {
       // Forward to the backend API
       console.log(`Proxying API request: ${req.url}`);
       next();

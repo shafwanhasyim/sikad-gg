@@ -28,16 +28,16 @@ const AppRouter = () => {
       <Route path="/student/:id" element={<MahasiswaDetail />} />
       
       {/* Mata Kuliah Routes */}
-      <Route path="/matkul" element={<MataKuliahList />} />
-      <Route path="/matkul/add" element={<MataKuliahForm />} />
-      <Route path="/matkul/edit/:id" element={<MataKuliahForm />} />
-      <Route path="/matkul/:id" element={<MataKuliahDetail />} />
+      <Route path="/class" element={<MataKuliahList />} />
+      <Route path="/class/add" element={<MataKuliahForm />} />
+      <Route path="/class/edit/:id" element={<MataKuliahForm />} />
+      <Route path="/class/:id" element={<MataKuliahDetail />} />
       
       {/* Nilai Routes */}
-      <Route path="/score/add" element={<NilaiForm />} />
-      <Route path="/score" element={<NilaiList />} />
-      <Route path="/score/edit/:id" element={<NilaiForm />} />
-      <Route path="/score/:id" element={<NilaiDetail />} />
+      <Route path="/grade/add" element={<NilaiForm />} />
+      <Route path="/grade" element={<NilaiList />} />
+      <Route path="/grade/edit/:id" element={<NilaiForm />} />
+      <Route path="/grade/:id" element={<NilaiDetail />} />
       
       {/* Special Routes */}
       <Route path="/ranking" element={<Ranking />} />

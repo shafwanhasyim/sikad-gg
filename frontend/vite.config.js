@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       '/user': 'http://localhost:4000',
       '/nilai': 'http://localhost:4000',
-      '/matakuliah': 'http://localhost:4000',
+      '/matkul': 'http://localhost:4000',
     },
     // historyApiFallback is now properly enabled in server config
     historyApiFallback: {

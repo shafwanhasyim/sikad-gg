@@ -85,7 +85,7 @@ const MataKuliahDetail = () => {
     
     try {
       await mataKuliahService.deleteMataKuliah(id);
-      navigate("/matakuliah");
+      navigate("/class");
     } catch (err) {
       console.error("Error deleting mata kuliah:", err);
       alert("Failed to delete mata kuliah. Please try again later.");
@@ -110,7 +110,7 @@ const MataKuliahDetail = () => {
         <h1 className="text-2xl font-bold">Mata Kuliah Detail</h1>
         <div className="space-x-2">
           <Link
-            to={`/matakuliah/edit/${id}`}
+            to={`/class/edit/${id}`}
             className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600"
           >
             Edit
@@ -188,7 +188,7 @@ const MataKuliahDetail = () => {
 
       <div className="flex justify-end">
         <Link
-          to="/matakuliah"
+          to="/class"
           className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
         >
           Back to List

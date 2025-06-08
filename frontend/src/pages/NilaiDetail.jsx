@@ -48,7 +48,7 @@ const NilaiDetail = () => {
     
     try {
       await nilaiService.deleteNilai(id);
-      navigate("/nilai");
+      navigate("/grade");
     } catch (err) {
       console.error("Error deleting nilai:", err);
       alert("Failed to delete nilai. Please try again later.");
@@ -81,7 +81,7 @@ const NilaiDetail = () => {
         <h1 className="text-2xl font-bold">Nilai Detail</h1>
         <div className="space-x-2">
           <Link
-            to={`/nilai/edit/${id}`}
+            to={`/grade/edit/${id}`}
             className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600"
           >
             Edit
@@ -106,7 +106,7 @@ const NilaiDetail = () => {
                 <p className="mt-1 text-lg font-medium text-gray-900">{nilai.mahasiswa.name}</p>
                 <p className="text-sm text-gray-500">NPM: {nilai.mahasiswa.npm}</p>
                 <p className="text-sm text-gray-500">Major: {nilai.mahasiswa.jurusan}</p>
-                <Link to={`/mahasiswa/${nilai.mahasiswa._id}`} className="text-blue-500 hover:underline text-sm">
+                <Link to={`/student/${nilai.mahasiswa._id}`} className="text-blue-500 hover:underline text-sm">
                   View Student Profile
                 </Link>
               </div>
@@ -122,7 +122,7 @@ const NilaiDetail = () => {
                 <p className="mt-1 text-lg font-medium text-gray-900">{nilai.mataKuliah.nama}</p>
                 <p className="text-sm text-gray-500">Code: {nilai.mataKuliah.kode}</p>
                 <p className="text-sm text-gray-500">Credits: {nilai.mataKuliah.sks} SKS</p>
-                <Link to={`/matakuliah/${nilai.mataKuliah._id}`} className="text-blue-500 hover:underline text-sm">
+                <Link to={`/class/${nilai.mataKuliah._id}`} className="text-blue-500 hover:underline text-sm">
                   View Course Details
                 </Link>
               </div>
@@ -162,7 +162,7 @@ const NilaiDetail = () => {
 
       <div className="flex justify-end">
         <Link
-          to="/nilai"
+          to="/grade"
           className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
         >
           Back to List

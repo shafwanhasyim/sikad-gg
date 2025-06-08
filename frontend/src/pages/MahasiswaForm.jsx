@@ -73,12 +73,12 @@ const MahasiswaForm = () => {
       
       if (isEditMode) {
         await mahasiswaService.updateMahasiswa(id, formData);
-        navigate("/mahasiswa", { 
+        navigate("/student", { 
           state: { successMessage: `${formData.name} was successfully updated.` } 
         });
       } else {
         await mahasiswaService.addMahasiswa(formData);
-        navigate("/mahasiswa", {
+        navigate("/student", {
           state: { successMessage: `${formData.name} was successfully added.` }
         });
       }
@@ -108,7 +108,7 @@ const MahasiswaForm = () => {
         isLoading={isLoading}
         title={isEditMode ? "Edit Mahasiswa Details" : "New Mahasiswa Details"}
         submitButtonText={isEditMode ? "Update" : "Create"}
-        onCancel={() => navigate("/mahasiswa")}
+        onCancel={() => navigate("/student")}
       />
     </div>
   );

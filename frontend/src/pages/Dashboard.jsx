@@ -80,7 +80,7 @@ const Dashboard = () => {
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold text-gray-700">Mahasiswa</h2>
           <p className="text-3xl font-bold text-blue-600 mt-2">{stats.mahasiswa}</p>
-          <Link to="/mahasiswa" className="text-blue-500 hover:underline block mt-4">
+          <Link to="/student" className="text-blue-500 hover:underline block mt-4">
             View Details →
           </Link>
         </div>
@@ -88,7 +88,7 @@ const Dashboard = () => {
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold text-gray-700">Mata Kuliah</h2>
           <p className="text-3xl font-bold text-green-600 mt-2">{stats.mataKuliah}</p>
-          <Link to="/matakuliah" className="text-blue-500 hover:underline block mt-4">
+          <Link to="/class" className="text-blue-500 hover:underline block mt-4">
             View Details →
           </Link>
         </div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold text-gray-700">Total Nilai</h2>
           <p className="text-3xl font-bold text-purple-600 mt-2">{stats.nilai}</p>
-          <Link to="/nilai" className="text-blue-500 hover:underline block mt-4">
+          <Link to="/grade" className="text-blue-500 hover:underline block mt-4">
             View Details →
           </Link>        </div>
       </div>
@@ -127,7 +127,7 @@ const Dashboard = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{student?.ip ? student.ip.toFixed(2) : 'N/A'}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500 hover:text-blue-700">
                       {student?.mahasiswa?._id ? (
-                        <Link to={`/mahasiswa/${student.mahasiswa._id}`}>View Details</Link>
+                        <Link to={`/student/${student.mahasiswa._id}`}>View Details</Link>
                       ) : (
                         <span className="text-gray-400">No Link</span>
                       )}
@@ -150,7 +150,7 @@ const Dashboard = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Link 
-            to="/mahasiswa/add" 
+            to="/student/add" 
             className="bg-blue-50 hover:bg-blue-100 p-4 rounded-lg flex flex-col items-center text-center"
           >
             <div className="text-blue-500 font-semibold">Add New Student</div>
@@ -158,7 +158,7 @@ const Dashboard = () => {
           </Link>
           
           <Link 
-            to="/matakuliah/add" 
+            to="/class/add" 
             className="bg-green-50 hover:bg-green-100 p-4 rounded-lg flex flex-col items-center text-center"
           >
             <div className="text-green-500 font-semibold">Add New Course</div>
@@ -166,7 +166,7 @@ const Dashboard = () => {
           </Link>
           
           <Link 
-            to="/nilai/add" 
+            to="/grade/add" 
             className="bg-purple-50 hover:bg-purple-100 p-4 rounded-lg flex flex-col items-center text-center"
           >
             <div className="text-purple-500 font-semibold">Record New Grade</div>

@@ -88,7 +88,7 @@ const NilaiList = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Nilai</h1>
         <Link
-          to="/nilai/add"
+          to="/grade/add"
           className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
           Add New Nilai
@@ -104,9 +104,9 @@ const NilaiList = () => {
           data={nilai}
           columns={columns}
           title="Nilai List"
-          onEdit={(row) => navigate(`/nilai/edit/${row._id}`)}
+          onEdit={(row) => navigate(`/grade/edit/${row._id}`)}
           onDelete={handleDelete}
-          onView={(row) => navigate(`/nilai/${row._id}`)}
+          onView={(row) => navigate(`/grade/${row._id}`)}
           emptyMessage="No nilai records found."
         />
       )}

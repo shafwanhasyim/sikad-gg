@@ -82,12 +82,12 @@ const MataKuliahForm = () => {
       
       if (isEditMode) {
         await mataKuliahService.updateMataKuliah(id, formData);
-        navigate("/matakuliah", { 
+        navigate("/class", { 
           state: { successMessage: `${formData.nama} was successfully updated.` } 
         });
       } else {
         await mataKuliahService.addMataKuliah(formData);
-        navigate("/matakuliah", {
+        navigate("/class", {
           state: { successMessage: `${formData.nama} was successfully added.` }
         });
       }
@@ -117,7 +117,7 @@ const MataKuliahForm = () => {
         isLoading={isLoading}
         title={isEditMode ? "Edit Mata Kuliah Details" : "New Mata Kuliah Details"}
         submitButtonText={isEditMode ? "Update" : "Create"}
-        onCancel={() => navigate("/matakuliah")}
+        onCancel={() => navigate("/class")}
       />
     </div>
   );

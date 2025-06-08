@@ -76,7 +76,7 @@ const MahasiswaList = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Mahasiswa</h1>
         <Link
-          to="/mahasiswa/add"
+          to="/student/add"
           className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
           Add New Mahasiswa
@@ -99,9 +99,9 @@ const MahasiswaList = () => {
         data={mahasiswa}
         columns={columns}
         title="Mahasiswa List"
-        onEdit={(row) => navigate(`/mahasiswa/edit/${row._id}`)}
+        onEdit={(row) => navigate(`/student/edit/${row._id}`)}
         onDelete={handleDelete}
-        onView={(row) => navigate(`/mahasiswa/${row._id}`)}
+        onView={(row) => navigate(`/student/${row._id}`)}
         emptyMessage="No mahasiswa records found."
       />
     </div>

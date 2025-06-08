@@ -119,7 +119,7 @@ const NilaiForm = () => {
         await nilaiService.addNilai(formData);
       }
       
-      navigate("/nilai");
+      navigate("/grade");
     } catch (err) {
       console.error("Error saving nilai:", err);
       setError("Failed to save nilai. Please try again.");
@@ -146,7 +146,7 @@ const NilaiForm = () => {
         isLoading={isLoading}
         title={isEditMode ? "Edit Nilai Details" : "New Nilai Details"}
         submitButtonText={isEditMode ? "Update" : "Create"}
-        onCancel={() => navigate("/nilai")}
+        onCancel={() => navigate("/grade")}
       />
     </div>
   );
